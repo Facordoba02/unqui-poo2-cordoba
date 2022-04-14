@@ -17,8 +17,6 @@ public class Counter {
 		return count;
 	}
 	
-
-	
 	public boolean isPair(int number) {
 	    return number % 2 == 0;
 	}
