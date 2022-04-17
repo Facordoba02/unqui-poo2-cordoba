@@ -24,7 +24,7 @@ class EvenDigitsTest {
 	
 	@Test
 	public void testEvenCounterDigits() {
-		int[] numberList = {451, 23, 11422, 2461, 225, 461, 12};
+		int[] numberList = {451, 23, 11422, 2461, 225, 461, 121111};
 		int result = EvenDigits.counterEvenDigits(numberList);
 		assertEquals(result, 11422);
 	}
