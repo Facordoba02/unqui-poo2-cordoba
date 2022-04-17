@@ -14,10 +14,10 @@ class MultiplosTest {
 		assertEquals(result,999);
 	}
 	
-//	@Test
-//	public void testMultiplosFail() {
-//		int result = Multiplos.multiploMasAltoEntre(37,57);
-//		assertEquals(result,-1);
-//	}
+	@Test
+	public void testMultiplosFail() {
+		int result = Multiplos.multiploMasAltoEntre(37,57);
+		assertEquals(result,-1);
+	}
 
 }
