@@ -8,12 +8,13 @@ import org.junit.jupiter.api.Test;
 import ar.edu.unq.po2.tp3.Counter;
 
 public class CounterTest {
-	Counter counter = new Counter();
+	
+	private Counter counter;
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-	
-	
+		
+	counter = new Counter();
 	
 	counter.addNumber(1);
 	counter.addNumber(3);
@@ -26,15 +27,23 @@ public class CounterTest {
 	counter.addNumber(1);
 	counter.addNumber(4);
 	}
-
 	
 	@Test
-	public void testEven() {
-		int amount = counter.getEvenNumbers();
-		assertEquals(amount, 9);
-		fail("algo paso");
+	public void testOddNumbers() {
+	int amount = counter.getOddOcurrences();
+	assertEquals(amount, 9);
 	}
 	
+	@Test
+	public void testEvenNumbers() {
+	int amount = counter.getEvenOcurrences();
+	assertEquals(amount, 1);
+	}
 	
+	@Test
+	public void testMultipleNumbers() {
+	int amount = counter.getMultiplesOcurrences(3);
+	assertEquals(amount, 2);
+	}
 
 }

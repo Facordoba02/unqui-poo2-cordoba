@@ -3,33 +3,41 @@ package ar.edu.unq.po2.tp3;
 import java.util.ArrayList;
 
 public class Counter {
-	private ArrayList<Integer> numbers = new ArrayList<Integer>();
-
-	public int getEvenNumbers() {
+	private ArrayList<Integer> numberList = new ArrayList<Integer>();
+	
+	public void addNumber(int num) {
+		numberList.add(num);
+	}
+	
+	public int getEvenOcurrences() {
 		int count = 0;
-		for(int i=0; i<=numbers.size();i++) {
-			int number = numbers.get(i);
-			if(this.isPair(number)) {
-				this.addNumber(number);
-				count += 1;
-			}
+		for(int num : numberList) {
+			if(this.isEven(num)) {count += 1;}
 		}
 		return count;
 	}
 	
-	public boolean isPair(int number) {
-	    return number % 2 == 0;
+	public int getOddOcurrences() {
+		int count = 0;
+		for(int num : numberList) {
+			if(! this.isEven(num)) {count += 1;}
+		}
+		return count;
 	}
 	
-	public boolean isOdd(int number) {
-	    return !this.isPair(number);
+	public int getMultiplesOcurrences(int multiple) {
+		int count = 0;
+		for(int num : numberList) {
+			if(this.isMultiple(num, multiple)) {count += 1;}
+		}
+		return count;
 	}
-
-	public ArrayList<Integer> getNumbers() {
-		return numbers;
+	
+	public boolean isEven(int num) {
+		return this.isMultiple(num, 2);
 	}
-
-	public void addNumber(Integer number) {
-		numbers.add(number);
+	
+	public boolean isMultiple(int num, int multiple) {
+		return num % multiple == 0;
 	}
 }
