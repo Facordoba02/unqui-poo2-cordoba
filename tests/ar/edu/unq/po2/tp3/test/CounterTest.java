@@ -11,6 +11,7 @@ public class CounterTest {
 	
 	private Counter counter;
 	
+	
 	@BeforeEach
 	public void setUp() throws Exception {
 		
