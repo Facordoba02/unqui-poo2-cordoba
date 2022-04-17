@@ -37,6 +37,7 @@ public class Counter {
 		return this.isMultiple(num, 2);
 	}
 	
+	
 	public boolean isMultiple(int num, int multiple) {
 		return num % multiple == 0;
 	}
